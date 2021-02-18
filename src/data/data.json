@@ -1,0 +1,12 @@
+{
+    "@context" : "http://schema.org/",
+    "@type" : "Organization",
+    "url" : "https://bartoszkuzminski.pl",
+    "logo" : "./logo.linkedin.png",
+    "contactPoint" : [{
+        "@type" : "ContactPoint",
+        "telephone" : "+48-664-586-981",
+        "email" : "kzbartosz@gmail.com",
+        "contactType" : "customer service"
+    }]
+}
