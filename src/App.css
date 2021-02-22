@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap");
+
+* {
+  font-family: "Josefin Slab", serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main h1 {
+  font-size: 5em;
+}
+

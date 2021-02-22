@@ -1,5 +1,9 @@
 import Frontpage from "./components/Frontpage";
 
-const App = () => {return <Frontpage />}
+import './App.css';
+
+const App = () => {
+  return <Frontpage />;
+};
 
 export default App;
