@@ -29,7 +29,7 @@ function Frontpage() {
       {data &&
         data.map((data) => (
 
-      
+          <canvas id="c" width="1288" height="1223"></canvas>
           <div key={data.id} className="main">
            
             <div className="mainBox">

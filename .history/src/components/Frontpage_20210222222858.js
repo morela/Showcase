@@ -29,9 +29,8 @@ function Frontpage() {
       {data &&
         data.map((data) => (
 
-      
+          <canvas id="c" width="1288" height="1223">
           <div key={data.id} className="main">
-           
             <div className="mainBox">
               <div className="title">
                 <h1>{data.contactName}</h1>
@@ -50,7 +49,7 @@ function Frontpage() {
               </div>
             </div>
           </div>
-         
+          </canvas>
         ))}
     </>
   );

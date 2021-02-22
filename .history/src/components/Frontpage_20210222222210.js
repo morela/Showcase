@@ -28,10 +28,7 @@ function Frontpage() {
     <>
       {data &&
         data.map((data) => (
-
-      
           <div key={data.id} className="main">
-           
             <div className="mainBox">
               <div className="title">
                 <h1>{data.contactName}</h1>
@@ -50,7 +47,6 @@ function Frontpage() {
               </div>
             </div>
           </div>
-         
         ))}
     </>
   );
