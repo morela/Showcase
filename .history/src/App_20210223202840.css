@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap");
+
+* {
+  font-family: "Josefin Slab", serif;
+}
+
+body {
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+a,
+h1,
+a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main h1 {
+  font-size: 5em;
+}
+
+.mainBox {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  flex-flow: column;
+}
+
+.icons {
+  display: flex;
+  flex-flow: column;
+}
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.icons > a:first-child img {
+  filter: invert(100%);
+}
+
+img:hover,
+img:focus,
+img:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
