@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+import canvasScript from "../canvas";
 import linkedin from "../img/linkedin.png";
 import github from "../img/github.png";
 
@@ -25,14 +26,17 @@ function Frontpage() {
   };
 
   return (
+    
     <>
+      <canvas  id="world" src="canvasScript"></canvas>
       {data &&
         data.map((data) => (
 
-      
+     
+         
           <div key={data.id} className="main">
-           
             <div className="mainBox">
+     
               <div className="title">
                 <h1>{data.contactName}</h1>
                 <a href={"mailto:" + data.email}>
@@ -43,15 +47,18 @@ function Frontpage() {
                 <a href={githubUrl} target="_blank">
                   <img src={github} alt="github" />
                 </a>
-
+                
                 <a href={linkedinUrl} target="_blank">
                   <img src={linkedin} alt="linkedin" />
                 </a>
               </div>
+              
             </div>
           </div>
          
+         
         ))}
+    
     </>
   );
 }

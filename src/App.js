@@ -1,6 +1,5 @@
 import Frontpage from "./components/Frontpage";
-
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return <Frontpage />;
