@@ -15,8 +15,8 @@ var canvas;
 var context;
 var particles;
 
-var mouseX = SCREEN_WIDTH * 0.5;
-var mouseY = SCREEN_HEIGHT * 0.5;
+var mouseX = SCREEN_WIDTH;
+var mouseY = SCREEN_HEIGHT;
 var mouseIsDown = false;
 
 function init() {

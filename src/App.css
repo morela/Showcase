@@ -85,3 +85,16 @@ img:active {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+@media only screen and (max-device-width: 670px) {
+  .mainBox {
+    flex-flow: column;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .main {
+    padding: 15px;
+    margin: 15px;
+    font-size: 1rem;
+  }
+}
