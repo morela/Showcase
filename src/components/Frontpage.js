@@ -19,7 +19,7 @@ function Frontpage() {
 
   // fetch data
   const fetchData = async () => {
-    const res = await fetch("https://showcase-server-json.herokuapp.com/personalInfo");
+    const res = await fetch("https://showcase-server-heroku.herokuapp.com/personalInfo");
     const data = await res.json();
 
     return data;
