@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-import canvasScript from "../canvas";
 import linkedin from "../img/linkedin.png";
 import github from "../img/github.png";
 
@@ -19,7 +18,7 @@ function Frontpage() {
 
   // fetch data
   const fetchData = async () => {
-    const res = await fetch("http://localhost:5000/personalInfo");
+    const res = await fetch("https://showcase-server-api.herokuapp.com/");
     const data = await res.json();
 
     return data;

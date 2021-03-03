@@ -5,7 +5,6 @@
   "requires": true,
   "packages": {
     "": {
-      "name": "showcase",
       "version": "0.1.0",
       "dependencies": {
         "@testing-library/jest-dom": "^5.11.9",
@@ -15,6 +14,9 @@
         "react-dom": "^17.0.1",
         "react-scripts": "4.0.2",
         "web-vitals": "^1.1.0"
+      },
+      "devDependencies": {
+        "json-server": "^0.16.3"
       }
     },
     "node_modules/@babel/code-frame": {
@@ -30579,7 +30581,8 @@
       "integrity": "sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg=="
     },
     "json-server": {
-      "version": "https://registry.npmjs.org/json-server/-/json-server-0.16.3.tgz",
+      "version": "0.16.3",
+      "resolved": "https://registry.npmjs.org/json-server/-/json-server-0.16.3.tgz",
       "integrity": "sha512-tbsBONiefH7SR5EhSmK4EzwP3kCHuOduUq5hWAQjCwXTva4OBeKVcPrciHNWOK/+12ygtUnjuWcAxuHgqTuBLA==",
       "dev": true,
       "requires": {
