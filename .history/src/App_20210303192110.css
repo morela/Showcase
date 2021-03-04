@@ -87,14 +87,14 @@ img:active {
 }
 
 @media only screen and (max-device-width: 670px) {
+  .mainBox {
+    flex-flow: column;
+  }
+}
+@media only screen and (max-device-width: 480px) {
   .main {
     padding: 15px;
     margin: 15px;
-  }
-  .main h1 {
-    font-size: 3em;
-  }
-  .mainBox {
-    flex-flow: column;
+    font-size: 1rem;
   }
 }

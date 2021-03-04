@@ -39,11 +39,11 @@ function Frontpage() {
                 </a>
               </div>
               <div className="icons">
-                <a href={githubUrl} target="_blank" rel="noreferrer">
+                <a href={githubUrl} target="_blank">
                   <img src={github} alt="github" />
                 </a>
 
-                <a href={linkedinUrl} target="_blank" rel="noreferrer">
+                <a href={linkedinUrl} target="_blank">
                   <img src={linkedin} alt="linkedin" />
                 </a>
               </div>
