@@ -1,4 +1,4 @@
-//Effect downloaded from the internet
+// Effect downloaded from the internet a bit modified
 
 var SCREEN_WIDTH = window.innerWidth;
 var SCREEN_HEIGHT = window.innerHeight;
@@ -15,12 +15,13 @@ var canvas;
 var context;
 var particles;
 
-var mouseX = SCREEN_WIDTH * .5 ;
-var mouseY = SCREEN_HEIGHT * .5 ;
+var mouseX = SCREEN_WIDTH * 0.5;
+var mouseY = SCREEN_HEIGHT * 0.5;
 var mouseIsDown = false;
 
 function init() {
   canvas = document.getElementById("world");
+
   if (canvas && canvas.getContext) {
     context = canvas.getContext("2d");
 
@@ -31,6 +32,7 @@ function init() {
     document.addEventListener("touchstart", documentTouchStartHandler, false);
     document.addEventListener("touchmove", documentTouchMoveHandler, false);
     window.addEventListener("resize", windowResizeHandler, false);
+    // passive: false - fixed problem with [Chrome] Unable to preventDefault inside passive event listener due to target being treated as passive.
 
     createParticles();
 
@@ -60,8 +62,8 @@ function createParticles() {
 }
 
 function documentMouseMoveHandler(event) {
-  mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
-  mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+  mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH);
+  mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT);
 }
 
 function documentMouseDownHandler(event) {
@@ -74,19 +76,19 @@ function documentMouseUpHandler(event) {
 
 function documentTouchStartHandler(event) {
   if (event.touches.length == 1) {
-    event.preventDefault();
+     
 
-    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
-    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5 ;
+    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH);
+    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT);
   }
 }
 
 function documentTouchMoveHandler(event) {
   if (event.touches.length == 1) {
-    event.preventDefault();
+     
 
-    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
-    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5 ;
+    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH);
+    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT);
   }
 }
 

@@ -15,9 +15,9 @@ function Frontpage() {
 
   const { data: result, error } = useSWR(url);
   if (error) return <h1>Something went wrong!</h1>;
-  if (!result) return <h1>Loading...</h1>;
 
   // I stay commented code only to show second option of getting data but without caching.
+  
   // const getData = async () => {
   //   const dataFromServer = await fetchData();
   //   setData(dataFromServer);
@@ -32,8 +32,7 @@ function Frontpage() {
 
   return (
     <>
-      <canvas id="world" src="canvasScript"></canvas>
-      {result &&
+      {result ? (
         result.map((data) => (
           <div key={data.id} className="main">
             <div className="mainBox">
@@ -47,14 +46,17 @@ function Frontpage() {
                 <a href={githubUrl} target="_blank" rel="noreferrer">
                   <img src={github} alt="github" />
                 </a>
-
                 <a href={linkedinUrl} target="_blank" rel="noreferrer">
                   <img src={linkedin} alt="linkedin" />
                 </a>
               </div>
             </div>
           </div>
-        ))}
+        ))
+      ) : (
+        <h1 className="loading">Loading...</h1>
+      )}
+      <canvas id="world" src="canvasScript"></canvas>
     </>
   );
 }
