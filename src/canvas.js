@@ -15,8 +15,8 @@ var canvas;
 var context;
 var particles;
 
-var mouseX = SCREEN_WIDTH;
-var mouseY = SCREEN_HEIGHT;
+var mouseX = SCREEN_WIDTH * .5 ;
+var mouseY = SCREEN_HEIGHT * .5 ;
 var mouseIsDown = false;
 
 function init() {
@@ -60,8 +60,8 @@ function createParticles() {
 }
 
 function documentMouseMoveHandler(event) {
-  mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) ;
-  mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) ;
+  mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
+  mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
 }
 
 function documentMouseDownHandler(event) {
@@ -76,8 +76,8 @@ function documentTouchStartHandler(event) {
   if (event.touches.length == 1) {
     event.preventDefault();
 
-    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) ;
-    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) ;
+    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
+    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5 ;
   }
 }
 
@@ -85,8 +85,8 @@ function documentTouchMoveHandler(event) {
   if (event.touches.length == 1) {
     event.preventDefault();
 
-    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) ;
-    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) ;
+    mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5 ;
+    mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5 ;
   }
 }
 

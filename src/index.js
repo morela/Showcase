@@ -1,6 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import { SWRConfig } from "swr";
 
-import App from './App'
+import App from "./App";
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+ReactDOM.render(
+  <SWRConfig value={{ fetcher }}>
+    <App />
+  </SWRConfig>,
+
+  document.querySelector("#root")
+);
